@@ -1,0 +1,41 @@
+  html{ scroll-behavior:smooth; }
+  body{ font-family:'Inter', sans-serif; background:#F8F9FA; color:#1E1E1E; overflow-x:hidden; }
+  h1,h2,h3,h4{ font-family:'Plus Jakarta Sans', sans-serif; }
+  ::selection{ background:#00C9B1; color:#fff; }
+  :focus-visible{ outline:2px solid #00C9B1; outline-offset:3px; border-radius:4px; }
+
+  @media (prefers-reduced-motion: reduce){
+    *{ animation-duration:0.001ms !important; transition-duration:0.001ms !important; }
+  }
+
+  /* Nav */
+  .nav-link{ position:relative; transition:color .2s ease, background .2s ease; }
+  .nav-link.active{ color:#0A1A2F; background:#00C9B1; }
+
+  /* Certifications: swiper progress bar restyle */
+  .cert-swiper .swiper-pagination-progressbar{ background:#E5E7EB; height:3px; top:auto; bottom:0; position:relative; border-radius:3px; margin-top:20px; }
+  .cert-swiper .swiper-pagination-progressbar-fill{ background:#00C9B1; border-radius:3px; }
+  .cert-swiper .swiper-button-prev, .cert-swiper .swiper-button-next{ display:none; }
+
+  /* Testimonial swiper bullets */
+  .testi-swiper .swiper-pagination-bullet{ background:rgba(248,249,250,0.35); opacity:1; width:9px; height:9px; }
+  .testi-swiper .swiper-pagination-bullet-active{ background:#00C9B1; width:26px; border-radius:5px; }
+
+  /* Timeline connector */
+  .timeline-line::before{ content:''; position:absolute; left:19px; top:6px; bottom:6px; width:2px; background:#E5E7EB; }
+
+  /* Timeline expand */
+  .tl-detail{ max-height:0; overflow:hidden; transition:max-height .35s ease, opacity .35s ease; opacity:0; }
+  .tl-item.open .tl-detail{ max-height:220px; opacity:1; margin-top:14px; }
+  .tl-item.open .tl-chevron{ transform:rotate(180deg); }
+  .tl-chevron{ transition:transform .2s ease; }
+
+  /* scroll to top */
+  #backToTop{ opacity:0; pointer-events:none; transform:translateY(10px); transition:all .2s ease; }
+  #backToTop.show{ opacity:1; pointer-events:auto; transform:translateY(0); }
+
+  /* particles container */
+  #particles-js{ position:absolute; inset:0; z-index:1; }
+
+  .skip-link{ position:absolute; left:16px; top:-60px; background:#00C9B1; color:#0A1A2F; padding:12px 18px; border-radius:8px; font-weight:600; z-index:2000; transition:top .2s ease; }
+  .skip-link:focus{ top:16px; }
